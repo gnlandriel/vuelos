@@ -32,4 +32,9 @@ public class VueloService {
         vueloRepository.deleteById(id);
     }
 
+    public Vuelo modificar(Vuelo vuelo) {
+        vueloRepository.save(vuelo);
+        return vueloRepository.findById(vuelo.getId()).orElse(null);
+    }
+
 }
