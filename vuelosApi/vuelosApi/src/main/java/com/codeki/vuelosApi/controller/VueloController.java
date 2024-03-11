@@ -37,4 +37,9 @@ public class VueloController {
     public void eliminarVuelo(@PathVariable Long id) {
         vueloService.borrarVueloXId(id);
     }
+
+    @PutMapping("/modificar")
+    public Vuelo modificarVuelo(@RequestBody Vuelo vuelo) {
+        return vueloService.modificar(vuelo);
+    }
 }
